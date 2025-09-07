@@ -149,3 +149,26 @@ footer small {
   border-radius: 6px; /* Optional: rounded corners like before */
 }
 
+/* 1. Make all containers flexible */ 
+.container, .content, .wrapper, .card, .box {
+   width: 100%;
+   max-width: 1200px; /* keeps large screens nice */ 
+   margin: 0 auto; 
+   padding: 10px; 
+   box-sizing: border-box; }
+
+    /* 2. Make images and media responsive */
+     img, video, iframe, embed, object {
+      max-width: 100%; height: auto; }
+
+     /* 3. Navbar and menus responsive */
+     .navbar, .menu { display: flex; flex-wrap: wrap; justify-content: space-between; } .navbar a, .menu a { padding: 10px; text-align: center; }
+
+     /* 4. Buttons and links easier to tap */ 
+     button, a { padding: 12px 20px; margin: 5px 0; display: inline-block; } 
+
+      /* 5. Mobile-specific adjustments */
+      @media (max-width: 768px) { body { font-size: 14px; } .navbar, .menu { flex-direction: column; text-align: center; } .card, .box, .content { width: 100%; margin-bottom: 15px; }}
+
+      /* Optional: smaller headings */
+       h1 { font-size: 24px; } h2 { font-size: 20px; } h3 { font-size:18px;}
