@@ -1,0 +1,151 @@
+:root {
+  --blue:#1E90FF;
+  --bg:#f6fbff;
+  --text:#0f172a;
+  --card:#ffffff;
+  --shadow:0 4px 12px rgba(0,0,0,0.08);
+  --radius:12px;
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Arial, sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+
+/* Header */
+header{background:white;box-shadow:var(--shadow);position:sticky;top:0;z-index:10}
+.container{width:min(1100px,90%);margin:auto}
+.nav{display:flex;justify-content:space-between;align-items:center;padding:.8rem 0}
+.brand{display:flex;align-items:center;gap:.5rem}
+.logo{background:var(--blue);color:white;padding:.4rem .6rem;border-radius:6px;font-weight:bold}
+.brand-name{font-weight:bold;font-size:1.2rem}
+nav ul{list-style:none;display:flex;gap:1rem}
+nav a{text-decoration:none;color:#333;font-weight:bold}
+.cta{background:var(--blue);color:white;padding:.4rem .8rem;border-radius:8px}
+
+/* Hero */
+.hero{display:grid;grid-template-columns:1.2fr .8fr;gap:1rem;align-items:center;padding:1.5rem 0}
+.hero-card{position:relative;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow)}
+.hero-card img{width:100%;height:100%;object-fit:cover}
+.hero-card .overlay{position:absolute;inset:0;background:rgba(0,0,0,0.3)}
+.hero-card h1{position:absolute;bottom:50px;left:20px;color:white;font-size:2rem}
+.hero-card .start{position:absolute;bottom:15px;left:20px;padding:.6rem 1rem;border:none;background:gold;border-radius:8px;font-weight:bold;cursor:pointer}
+aside{background:var(--card);padding:1rem;border-radius:var(--radius);box-shadow:var(--shadow)}
+
+/* Sections */
+section{padding:1.5rem 0}
+.section-title{font-size:1.4rem;margin-bottom:1rem}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1rem}
+.card,.res-card{background:var(--card);padding:1rem;border-radius:var(--radius);box-shadow:var(--shadow)}
+.icon{font-size:1.5rem}
+.btn{background:var(--blue);color:white;padding:.4rem .8rem;border-radius:8px;text-decoration:none;font-weight:bold}
+
+/* Contact */
+.social{display:flex;gap:1rem;margin-top:.5rem}
+.social a{color:black;font-size:1.6rem;text-decoration:none}
+.social a:hover{color:var(--blue)}
+
+#contact h3 {
+  margin-top: 0.5in; /* 0.5 inch space from the previous elements */
+}
+
+.study-points {
+  list-style: disc;
+  margin-top: 1rem; /* space from the note paragraph */
+  padding-left: 1.2rem;
+  color: #0f172a;
+}
+.study-points li {
+  margin-bottom: 0.5rem;
+}
+
+/*about*/
+.about-points {
+  list-style: disc;
+  margin-top: 1rem;
+  padding-left: 1.2rem;
+  color: #0f172a;
+}
+
+.about-points li {
+  margin-bottom: 0.5rem;
+}
+
+/* Footer */
+footer {
+  background: #1E90FF;
+  color: white;
+  padding: 2rem 0;
+}
+
+.footer-inner {
+  width: min(1100px, 90%);
+  margin: auto;
+}
+.footer-columns {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+.footer-contact,
+.footer-social,
+.footer-credit {
+  flex: 1;
+  min-width: 250px;
+  padding: 0 1rem;
+}
+
+/* Contact + Credit */
+.footer-contact h3,
+.footer-social h3,
+.footer-credit h3 {
+  margin-bottom: 0.5rem;
+}
+
+.footer-credit {
+  text-align: right;
+}
+
+.footer-credit p {
+  margin: 0.2rem 0;
+  font-weight: bold;
+}
+
+/* Social (center) */
+.footer-social {
+  text-align: center;
+  margin-top: 0.5rem;
+}
+
+.footer-social .social {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 0.8rem;
+}
+
+.footer-social .social a {
+  color: white;
+  font-size: 1.6rem;
+  text-decoration: none;
+}
+
+.footer-social .social a:hover {
+  color: gold;
+}
+/* Copyright */
+footer small {
+  display: block;
+  text-align: center;   /* Center align */
+  margin-top: 1.5rem;   /* Add space above */
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+.logo-img {
+  height: 50px; /* Adjust the height as needed */
+  width: auto;  /* Maintain aspect ratio */
+  border-radius: 6px; /* Optional: rounded corners like before */
+}
+
