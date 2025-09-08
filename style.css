@@ -39,8 +39,17 @@ header .brand-name {
 }
 
 /* Hero */
-.hero{display:grid;grid-template-columns:1.2fr .8fr;gap:1rem;align-items:center;padding:1.5rem 0}
-aside{background:var(--card);padding:1rem;border-radius:var(--radius);box-shadow:var(--shadow)}
+.hero {
+  display: flex;          /* simple flex layout */
+  align-items: center;    /* center vertically if needed */
+  padding: 1.5rem 0;
+}
+
+.hero aside h3 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: var(--text);
+}
 
 /* Sections */
 section{padding:1.5rem 0}
