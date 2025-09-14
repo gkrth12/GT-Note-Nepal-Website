@@ -448,10 +448,18 @@
     justify-content: center;
   }
 }
-/* Container for Quick Resources & Student Zone */
-#quick-resources, 
+
+/* ================= Quick Resources & Student Zone ================= */
+
+/* Sections padding */
+#quick-resources,
 #student-zone {
   padding: 40px 20px;
+}
+
+/* Add 0.5 inch spacing above Student Zone */
+#student-zone {
+  margin-top: 0.5in;
 }
 
 /* Center headings */
@@ -467,7 +475,7 @@
   margin-bottom: 15px;
 }
 
-/* Cards container: grid for desktop, stack on mobile */
+/* Cards container */
 #quick-resources .cards-container,
 #student-zone .cards-container {
   display: grid;
@@ -477,8 +485,7 @@
 }
 
 /* Card styling */
-#quick-resources .subject-card,
-#student-zone .subject-card {
+.subject-card {
   background: #fff;
   padding: 20px;
   border-radius: 12px;
@@ -487,6 +494,8 @@
   flex-direction: column;
   align-items: center; /* center content inside card */
   text-align: center;
+  max-width: 300px;
+  margin: 10px;
 }
 
 /* Card icon */
@@ -495,42 +504,47 @@
   margin-bottom: 10px;
 }
 
-/* Buttons inside cards */
-.subject-card .btn {
-  display: inline-block;
-  padding: 10px 18px;
-  background: rgb(89, 89, 248);
-  color: #fff;
-  text-decoration: none;
-  border-radius: 6px;
-  margin: 5px 0;
-  transition: 0.3s;
-}
-
-.subject-card .btn:hover {
-  background: blue;
-}
-
-/* Disabled Coming Soon button */
-#student-zone .subject-card button[disabled] {
-  background: gray;
-  cursor: not-allowed;
-}
-/* Quick Resources buttons spacing */
-#quick-resources .subject-card .btn {
-  margin-right: 3px; /* ~0.1 inch */
-  margin-top: 5px;   /* optional vertical spacing */
-}
-/* Buttons container: left and right */
+/* Buttons container for Quick Resources (left-right buttons) */
 #quick-resources .subject-card .btn-container {
   display: flex;
   justify-content: space-between;
   width: 100%;
+  flex-wrap: wrap; /* wrap on very small screens */
   margin-top: 10px;
 }
 
-#quick-resources .subject-card .btn {
-  width: 48%; /* almost half the card width */
-  margin: 0;  /* remove previous margins */
+/* Buttons inside cards */
+.subject-card .btn {
+  display: inline-block;
+  padding: 10px 18px;
+  background: green;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+  width: 48%;   /* almost half card width */
+  margin: 5px 0; /* vertical spacing */
+  transition: 0.3s;
 }
 
+.subject-card .btn:hover {
+  background: #0a8d0a;
+}
+
+/* Disabled Coming Soon button in Student Zone */
+#student-zone .subject-card button[disabled] {
+  background: gray;
+  cursor: not-allowed;
+}
+
+/* Mobile adjustments */
+@media (max-width: 500px) {
+  #quick-resources .subject-card .btn-container,
+  #student-zone .subject-card {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #quick-resources .subject-card .btn {
+    width: 100%; /* full width on mobile */
+  }
+}
