@@ -448,3 +448,71 @@
     justify-content: center;
   }
 }
+/* Container for Quick Resources & Student Zone */
+#quick-resources, 
+#student-zone {
+  padding: 40px 20px;
+}
+
+/* Center headings */
+#quick-resources h2,
+#student-zone h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Center paragraph in Student Zone */
+#student-zone p {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+/* Cards container: grid for desktop, stack on mobile */
+#quick-resources .cards-container,
+#student-zone .cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  justify-items: center; /* center cards horizontally */
+}
+
+/* Card styling */
+#quick-resources .subject-card,
+#student-zone .subject-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* center content inside card */
+  text-align: center;
+}
+
+/* Card icon */
+.subject-card .subject-icon {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+/* Buttons inside cards */
+.subject-card .btn {
+  display: inline-block;
+  padding: 10px 18px;
+  background: green;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+  margin: 5px 0;
+  transition: 0.3s;
+}
+
+.subject-card .btn:hover {
+  background: #0a8d0a;
+}
+
+/* Disabled Coming Soon button */
+#student-zone .subject-card button[disabled] {
+  background: gray;
+  cursor: not-allowed;
+}
