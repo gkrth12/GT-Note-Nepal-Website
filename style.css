@@ -499,7 +499,7 @@
 .subject-card .btn {
   display: inline-block;
   padding: 10px 18px;
-  background: green;
+  background: rgb(89, 89, 248);
   color: #fff;
   text-decoration: none;
   border-radius: 6px;
@@ -508,7 +508,7 @@
 }
 
 .subject-card .btn:hover {
-  background: #0a8d0a;
+  background: blue;
 }
 
 /* Disabled Coming Soon button */
@@ -516,3 +516,21 @@
   background: gray;
   cursor: not-allowed;
 }
+/* Quick Resources buttons spacing */
+#quick-resources .subject-card .btn {
+  margin-right: 3px; /* ~0.1 inch */
+  margin-top: 5px;   /* optional vertical spacing */
+}
+/* Buttons container: left and right */
+#quick-resources .subject-card .btn-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 10px;
+}
+
+#quick-resources .subject-card .btn {
+  width: 48%; /* almost half the card width */
+  margin: 0;  /* remove previous margins */
+}
+
