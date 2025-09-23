@@ -1,0 +1,90 @@
+body {
+      font-family: "Poppins", sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f9f9f9;
+      color: #333;
+    }
+
+    h2.section-title {
+      text-align: center;
+      font-size: 1.8rem;
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      color: #1E90FF;
+      animation: fadeIn 1.5s ease-in-out;
+    }
+
+    /* Cards */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      padding: 2rem;
+      animation: slideUp 1.2s ease-in-out;
+    }
+
+    .card {
+      background: white;
+      border-radius: 12px;
+      padding: 1.5rem;
+      text-align: center;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+      transition: transform 0.4s, box-shadow 0.4s;
+    }
+
+    .card i {
+      font-size: 2rem;
+      color: #1E90FF;
+      margin-bottom: 0.5rem;
+    }
+
+    .card:hover {
+      transform: translateY(-10px) scale(1.05);
+      box-shadow: 0 12px 20px rgba(0,0,0,0.15);
+    }
+
+    .card h3 {
+      color: #1E90FF;
+    }
+
+    .card p {
+      margin: 0.5rem 0 1rem;
+      font-size: 0.95rem;
+    }
+
+    /* Buttons */
+    .btn {
+      display: inline-block;
+      padding: 0.6rem 1.2rem;
+      border-radius: 6px;
+      background: #28A745;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      margin: 0.3rem 0.2rem;
+      transition: background 0.3s, transform 0.3s;
+    }
+
+    .btn:hover {
+      background: #1E7E34;
+      transform: scale(1.05);
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(-20px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+
+    @keyframes slideUp {
+      from {opacity: 0; transform: translateY(40px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+
+    /* Mobile */
+    @media(max-width: 600px){
+      h2.section-title {
+        font-size: 1.4rem;
+      }
+    }
